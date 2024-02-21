@@ -1,0 +1,32 @@
+* {
+    border: 1px solid;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+li {
+    background-color: rgb(89, 123, 196);
+    border-radius: 10%;
+    padding: 5px;
+}
+
+[img] {
+    float: left;
+}
+
+p {
+    display: flex;
+}
+
+.content {
+    background-color: white;
+}
+
+.main {
+    background-color: blue;
+}
