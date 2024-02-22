@@ -39,7 +39,7 @@ article li {
     border: 1px dotted grey;
 }
 
-article li:hover {
+article a:hover {
     background-color: yellowgreen;
     color: blue; 
 }
