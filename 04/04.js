@@ -20,7 +20,6 @@ const handleClick = () => { //함수 호출
     console.log("Click", n); // 버튼을 누를 때마다 n이 생긴다
 }
 };
-
 // 짜냈다...
 // const $random = document.querySelector("#random1");
 // const randomNum = Math.floor(Math.random() * (6-1) +1);
