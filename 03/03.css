@@ -19,3 +19,15 @@ h2 {
     font-size: medium;
     color: blue;
 }
+
+.btGroup > button {
+    background-color: yellow;
+}
+
+#btArea2 > button{
+    background-color:green;
+}
+
+#bt3 {
+    background-color: purple;
+}
