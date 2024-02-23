@@ -13,8 +13,8 @@ document.addEventListener("DOMContentLoaded", () => {
 const handleClick = () => { //함수 호출
     const n = Math.floor(Math.random() * 6) + 1;
     //이미지에 src 바꿔주기
-    const img = document.querySelector("#img");
-    img.setAttribute("src", `./img/${n}.png`)
+    const img = document.querySelector("#img");//셀렉터 찾기 = 적용 대상 찾기
+    img.setAttribute("src", `./img/${n}.png`) //속성(src)를 바꿔서 이미지(링크)를 바꿔준다
     console.log("Click", n); // 버튼을 누를 때마다 n이 생긴다
 }
 
