@@ -1,5 +1,6 @@
 // 한 쪽이 섭씨 > 다른 쪽은 화씨가 되게
- 
+//<태그>txt<태그> .innerHTML로 값을 가져와
+// 폼 태그 요소는 .value
 const handleChange = (s1, s2, lb1, lb2, t1, t2) => {
     if (s1.value === "℃") {
         s2.value="℉";
