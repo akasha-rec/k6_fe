@@ -26,15 +26,14 @@ document.addEventListener("DOMContentLoaded", () => {
             return;
         }
 
-        //if(flag === false) {
-        if(!flag) {
-        n = Math.floor(Math.random()*100) +1; //1~100
-        console.log("n=", n);
-        flag = true;
+         // if (flag === false) {
+        if (!flag) {  
+            n = Math.floor(Math.random()*100) + 1 ; //1~100까지
+            console.log("n =", n);        
+            flag = true;
         
         //초기화
         numInput.style.display = "inline";
-        bt.innerHTML = "확인";
         numInput.value = "";
         numInput.focus();
         bt.innerHTML = "확인";
