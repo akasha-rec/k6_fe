@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", () => {
         numInput.style.display = "inline";
         bt.innerHTML = "확인";
         numInput.value = "";
-        numInput.focus;
+        numInput.focus();
         bt.innerHTML = "확인";
         }
 
