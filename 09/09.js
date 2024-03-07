@@ -87,9 +87,13 @@ console.log("arr21 filter 결과 =", arr21)
 arr21 = arr.filter(v=>!isNaN(v));//isNaN을 만족하는 것만 출력 
 console.log("반복문 필터 arr21 = ", arr21)
 
+//전개연산자
+let arr22 = [...arr];
+console.log("전개연산자 : ", arr);
+
 //★map, fliter는 배열에만 사용 가능
 ////reference type > 오브젝트(python의 dictionary) 순서 중요X > key
-//.연산자 표현 / [] 표현
+//.연산자 표현 > obj. / [] 표현 > obj[]
 let obj = {'❤':1, '🌹':2};
 console.log("오브젝트 : ", obj);
 console.log("오브젝트 요소 접근 : ", obj['❤']);
@@ -121,4 +125,8 @@ console.log("arr3=", arr3)
 //object > array 방법
 //1. Object.entries()
 //2. Object.keys(), Object.values()
+
+//includes 배열 O > 문자열 O
+//indexOf 어느 인덱스에 있는지
+//슬라이싱 > slice - minus index 사용O / substring
 
