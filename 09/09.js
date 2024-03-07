@@ -64,12 +64,12 @@ arr2 = arr.map((v)=>{
 });
 console.log("map arr2 =", arr2)
 
-arr3 = arr.map(v=>v + "❤");
-console.log("map arr3 =", arr3)
+arr2_1 = arr.map(v=>v + "❤");
+console.log("map arr3 =", arr2_1)
 
 //console.log("배열 index 사용하는 함수")
-arr3 = arr.map((v, i) => v + "❤");
-console.log("map arr3 =", arr3)
+arr2_1 = arr.map((v, i) => v + "❤");
+console.log("map arr3 =", arr2_1)
 
 arr2 = arr.map(v=> v+"👌");
 console.log("arr2 =", arr2)
@@ -82,28 +82,43 @@ let arr21 = [];
 for (let item of arr) { //isNaN 문자만 출력하겠다
     if(isNaN(item)) arr21.push(item);
 }
-console.log(arr21)
+console.log("arr21 filter 결과 =", arr21)
 
-arr21 = arr.filter(v=>isNaN(v));//isNaN을 만족하는 것만 출력 
-
+arr21 = arr.filter(v=>!isNaN(v));//isNaN을 만족하는 것만 출력 
 console.log("반복문 필터 arr21 = ", arr21)
+
+//★map, fliter는 배열에만 사용 가능
 ////reference type > 오브젝트(python의 dictionary) 순서 중요X > key
+//.연산자 표현 / [] 표현
 let obj = {'❤':1, '🌹':2};
-// console.log("오브젝트 : ", obj);
-// console.log("오브젝트 요소 접근 : ", obj['❤']);
+console.log("오브젝트 : ", obj);
+console.log("오브젝트 요소 접근 : ", obj['❤']);
 
 //오브젝트 순회
-// console.log("오브젝트 for in")
-// for(let i in obj) { //문자열 순회 > in은 key 출력 > 배열의 key가 index
-//     console.log("오브젝트 : ", obj[i])
-// }
+console.log("오브젝트 for in")
+for(let i in obj) { //문자열 순회 > in은 key 출력 > 배열의 key가 index
+    console.log("오브젝트 : ", obj[i])
+}
 
+// 키-값 배열을
+for (let c of Object.entries(obj)) { //정말 Object에서 가져와서
+    console.log("오브젝트 : ", c);
+    console.log("오브젝트 : ", c[0]);
+    console.log("오브젝트 : ", c[1]);
+}
+
+//구조분해 할당
 // console.log("오브젝트 for of") //키:값 쌍으로 가져와야 해
-// for (let [k, v] of Object.entries(obj)) { //정말 Object에서 가져와서
-//     console.log("오브젝트 : ", k);
-//     console.log("오브젝트 : ", v);
-// }
+for (let [k, v] of Object.entries(obj)) { //정말 Object에서 가져와서
+    console.log("오브젝트 : ", k);
+    console.log("오브젝트 : ", v);
+}
 
 // console.log("오브젝트 키배열 : ", Object.keys(obj));
-// let arr3 = Object.keys(obj).map(k => k + obj[k]);
-// console.log("arr3=", arr3)
+let arr3 = Object.keys(obj).map(k => k + obj[k]);
+console.log("arr3=", arr3)
+
+//object > array 방법
+//1. Object.entries()
+//2. Object.keys(), Object.values()
+
