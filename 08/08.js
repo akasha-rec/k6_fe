@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
          // if (flag === false) {
         if (!flag) {  
-            n = Math.floor(Math.random()*100) + 1 ; //1~100까지
+            let n = Math.floor(Math.random()*100) + 1 ; //1~100까지
             console.log("n =", n);        
             flag = true;
         
