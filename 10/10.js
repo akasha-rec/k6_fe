@@ -10,16 +10,40 @@ document.addEventListener("DOMContentLoaded", ()=>{
         // 배열 초기화 nums.length = 0; > 배열의 내용 지워져
         nums = [];
         while (nums.length < 7) {
+            if(!nums.includes(n)) {
+                nums.push(`<span class="sp${parseInt(n/10)}">${n}</span>`);
             let n = Math.floor(Math.random()*45)+1;
-            nums.push(n)
+            // if (nums in n) continue //continue : 밑의 코드 무시하고 다시 위로 가는 거
+            // else {
+            //     nums.push(`<span class="sp${parseInt(n/10)}">${n}</span>`);
+            //     nums.length ===6
+            //     nums.push("+");
+            // }
         }
-        
-        let tags = ""; //아무것도 없는 문자열
-        nums.map((v)=>{
-            tags = tags + `<span class="sp${parseInt(v/10)}">${v}</span>`;
-            console.log(tags)
-        });
-        lotto.innerHTML = tags;
+        //6번째 자리에 +를 삽입하겠다.
+        nums.splice(6, 0, `<span>+</span>`);
+        lotto.innerHTML = nums.toString().replaceAll(',','');
+    }
+        //nums에 다시 넣어주겠다.
+        // nums = nums.map((v)=>
+        //     `<span class="sp${parseInt(v/10)}">${v}</span>`
+        //     );
+        // nums.splice(6, 0, `<span>+</span>`);
+        // lotto.innerHTML = nums.toString().replaceAll(',','');
+        // console.log(s)
+            // lotto.innerHTML = s;
 
+        //문자열로 처리
+        // //`{백틱}` : 변수 표현 되고 {연산}도 가능하다
+        // let tags = ""; //아무것도 없는 문자열
+        // nums.map((v, i)=>{
+        //     tags = tags + `<span class="sp${parseInt(v/10)}">${v}</span>`;
+        //     if (i === 5)
+        //     tags = tags + `<span class>+</span>`;
+        
+        // });
+        // lotto.innerHTML = tags;
+        
+        // let tags = [];
     });
 });
