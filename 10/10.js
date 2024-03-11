@@ -7,27 +7,26 @@ document.addEventListener("DOMContentLoaded", ()=>{
     bt.addEventListener("click", ()=>{
         // 1~45까지 7개의 랜덤수 중복 허용X
         // 몇 번 돌려야 끝나는지 모르니까 while
-        // 배열 초기화 nums.length = 0; > 배열의 내용 지워져
+        // 배열 초기화 nums.length = 0; > 배열의 내용 지워줘
         nums = [];
-        while (nums.length < 7) {
-            if(!nums.includes(n)) {
-                nums.push(`<span class="sp${parseInt(n/10)}">${n}</span>`);
-            let n = Math.floor(Math.random()*45)+1;
-            // if (nums in n) continue //continue : 밑의 코드 무시하고 다시 위로 가는 거
-            // else {
-            //     nums.push(`<span class="sp${parseInt(n/10)}">${n}</span>`);
-            //     nums.length ===6
-            //     nums.push("+");
-            // }
-        }
-        //6번째 자리에 +를 삽입하겠다.
-        nums.splice(6, 0, `<span>+</span>`);
-        lotto.innerHTML = nums.toString().replaceAll(',','');
-    }
-        //nums에 다시 넣어주겠다.
-        // nums = nums.map((v)=>
-        //     `<span class="sp${parseInt(v/10)}">${v}</span>`
-        //     );
+        while(nums.length < 7) {
+            let n = Math.floor(Math.random() * 45) + 1  ;
+            if(!nums.includes(n)) nums.push(n);
+          }
+          
+          //6번째 자리에 +를 삽입하겠다.
+          //nums에 다시 넣어주겠다.
+          nums = nums.map((v)=>
+          `<span class="sp${parseInt(v/10)}">${v}</span>`
+          );
+          nums.splice(6, 0, `<span>+</span>`);
+          lotto.innerHTML = nums.toString().replaceAll(',','');
+          // else {
+          //     nums.push(`<span class="sp${parseInt(n/10)}">${n}</span>`);
+          //     nums.length ===6
+          //     nums.push("+");
+          // }
+
         // nums.splice(6, 0, `<span>+</span>`);
         // lotto.innerHTML = nums.toString().replaceAll(',','');
         // console.log(s)
